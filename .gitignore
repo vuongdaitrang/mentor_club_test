@@ -1,0 +1,8 @@
+node_modules/
+output/
+__pycache__/
+*.pyc
+.env
+*.local.json
+_app.json
+khach.config.json
