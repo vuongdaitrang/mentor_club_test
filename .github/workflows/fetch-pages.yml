@@ -1,0 +1,23 @@
+name: fetch-pages
+
+on:
+  repository_dispatch:
+    types: [fetch-pages]
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Lấy danh sách Page về Base
+        env:
+          LARK_APP_SECRET: ${{ secrets.LARK_APP_SECRET }}
+          FB_USER_TOKEN:   ${{ secrets.FB_USER_TOKEN }}
+          LARK_APP_ID:     ${{ github.event.client_payload.lark_app_id || 'cli_aacc8aef04789ee6' }}
+          LARK_APP_TOKEN:  ${{ github.event.client_payload.base_token || 'NzTdbEcNvan2xTsUxd9jCVQqpfJ' }}
+          LARK_TABLE_ID:   ${{ github.event.client_payload.table_id || 'tblTYIwMAN3wzkd8' }}
+        run: node scripts/fetch-pages-to-lark.js ${{ github.event.client_payload.mode }}
