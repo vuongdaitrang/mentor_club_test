@@ -16,11 +16,11 @@
 'use strict';
 const fs = require('fs'), os = require('os'), path = require('path');
 const CFG = {
-  APP_ID:       process.env.LARK_APP_ID    || 'cli_aa8cccd0b262deed',
-  APP_SECRET:   process.env.LARK_APP_SECRET|| '',
-  APP_TOKEN:    process.env.LARK_APP_TOKEN || 'Rnmkbe9vMa7V6ssUP37lh3Cbgdd',
-  TABLE_ID:     process.env.LARK_TABLE_ID  || 'tblxSnM1mHO8gOYD',   // 14.3 Đăng bài tự động
-  PAGES_TABLE:  process.env.PAGES_TABLE_ID || 'tblNYaNnHUhMofPa',   // 14.1 Pages (ID + access_token)
+  APP_ID:       process.env.LARK_APP_ID    || '',                  // BẮT BUỘC qua env/Variables
+  APP_SECRET:   process.env.LARK_APP_SECRET|| '',                  // BẮT BUỘC qua env/Secrets
+  APP_TOKEN:    process.env.LARK_APP_TOKEN || '',                  // BẮT BUỘC: base token (Variables)
+  TABLE_ID:     process.env.LARK_TABLE_ID  || '',                  // BẮT BUỘC: bảng 14.3 Đăng bài (Variables)
+  PAGES_TABLE:  process.env.PAGES_TABLE_ID || '',                  // BẮT BUỘC: bảng Pages có ID+access_token (Variables)
   LARK_DOMAIN:  process.env.LARK_DOMAIN    || 'https://open.larksuite.com',
   GRAPH_VERSION:process.env.GRAPH_VERSION  || 'v21.0',
   RESPECT_SCHEDULE: process.env.RESPECT_SCHEDULE !== 'false',
