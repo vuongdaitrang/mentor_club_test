@@ -17,7 +17,7 @@ jobs:
         env:
           LARK_APP_SECRET: ${{ secrets.LARK_APP_SECRET }}
           LARK_APP_ID:     ${{ github.event.client_payload.lark_app_id || 'cli_aac2cc9af1f8de15' }}
-          LARK_APP_TOKEN:  ${{ github.event.client_payload.base_token || 'NzTdbEcNvan2xTsUxd9jCVQqpfJ' }}
+          LARK_APP_TOKEN:  ${{ github.event.client_payload.base_token || 'PanKbZN6RamBafs3Y7wjArx2pMg' }}
           LARK_TABLE_ID:   ${{ github.event.client_payload.table_id || 'tblrIrGjAcFbsHcy' }}
           PAGES_TABLE_ID:  ${{ github.event.client_payload.pages_table_id || 'tblTYIwMAN3wzkd8' }}
           RESPECT_SCHEDULE: ${{ github.event.client_payload.respect_schedule }}
