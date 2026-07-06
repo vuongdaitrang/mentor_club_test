@@ -16,12 +16,12 @@ const fs = require('fs'), os = require('os'), path = require('path');
 // Bí mật (APP_SECRET, FB_PAGE_TOKEN) KHÔNG hardcode để tránh lộ khi đẩy lên git.
 // Các giá trị không bí mật có default tiện chạy nhanh; ghi đè qua env nếu cần.
 const CFG = {
-  APP_ID:        process.env.LARK_APP_ID     || '',                       // BẮT BUỘC qua env/Variables
-  APP_SECRET:    process.env.LARK_APP_SECRET || '',                       // BẮT BUỘC qua env/Secrets
-  APP_TOKEN:     process.env.LARK_APP_TOKEN  || '',                       // BẮT BUỘC: base token (Variables)
-  TABLE_ID:      process.env.LARK_TABLE_ID   || '',                       // BẮT BUỘC: bảng "Đăng Reel" (Variables)
-  FB_PAGE_ID:    process.env.FB_PAGE_ID      || '',                       // BẮT BUỘC: Page ID (Variables)
-  FB_PAGE_TOKEN: process.env.FB_PAGE_TOKEN   || '',                       // BẮT BUỘC qua env/Secrets
+  APP_ID:        process.env.LARK_APP_ID     || 'cli_aa8cccd0b262deed',
+  APP_SECRET:    process.env.LARK_APP_SECRET || '',                       // BẮT BUỘC qua env
+  APP_TOKEN:     process.env.LARK_APP_TOKEN  || 'Lytbb51igaGR6Os2ByaljqpkgFc', // base token
+  TABLE_ID:      process.env.LARK_TABLE_ID   || 'tblopLrHPe2A4QB0',       // bảng "Đăng Reel"
+  FB_PAGE_ID:    process.env.FB_PAGE_ID      || '446883538502198',        // page "John CVTI"
+  FB_PAGE_TOKEN: process.env.FB_PAGE_TOKEN   || '',                       // BẮT BUỘC qua env
   LARK_DOMAIN:   process.env.LARK_DOMAIN     || 'https://open.larksuite.com',
   GRAPH_VERSION: 'v21.0',
   TRIGGER:       process.env.TRIGGER         || 'Chờ đăng',
