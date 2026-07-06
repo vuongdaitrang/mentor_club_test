@@ -17,8 +17,8 @@ jobs:
         env:
           LARK_APP_SECRET: ${{ secrets.LARK_APP_SECRET }}
           FB_USER_TOKEN:   ${{ secrets.FB_USER_TOKEN }}
-          LARK_APP_ID:     ${{ github.event.client_payload.lark_app_id || vars.LARK_APP_ID }}
-          LARK_APP_TOKEN:  ${{ github.event.client_payload.base_token || vars.LARK_BASE_ID }}
-          LARK_TABLE_ID:   ${{ github.event.client_payload.table_id || vars.TABLE_POSTS }}
+          LARK_APP_ID:     ${{ github.event.client_payload.lark_app_id || 'cli_aaa8f309ca229ed3' }}
+          LARK_APP_TOKEN:  ${{ github.event.client_payload.base_token || 'M2Uab8KiYa187XsZxWslcdJjgDg' }}
+          LARK_TABLE_ID:   ${{ github.event.client_payload.table_id || 'tblVyqSyF9GRyH4C' }}
           POSTS_PER_PAGE:  ${{ github.event.client_payload.posts_per_page }}
         run: node scripts/fetch-posts-to-lark.js ${{ github.event.client_payload.mode }}
