@@ -17,10 +17,10 @@
  */
 'use strict';
 const CFG = {
-  APP_ID:      process.env.LARK_APP_ID    || '',                  // BẮT BUỘC qua env/Variables
-  APP_SECRET:  process.env.LARK_APP_SECRET|| '',                  // BẮT BUỘC qua env/Secrets
-  APP_TOKEN:   process.env.LARK_APP_TOKEN || '',                  // BẮT BUỘC: base chứa bảng Page (Variables)
-  TABLE_ID:    process.env.LARK_TABLE_ID  || '',                  // BẮT BUỘC: bảng Pages (Variables)
+  APP_ID:      process.env.LARK_APP_ID    || 'cli_aa8cccd0b262deed',
+  APP_SECRET:  process.env.LARK_APP_SECRET|| '',
+  APP_TOKEN:   process.env.LARK_APP_TOKEN || 'Rnmkbe9vMa7V6ssUP37lh3Cbgdd', // base chứa bảng Page
+  TABLE_ID:    process.env.LARK_TABLE_ID  || 'tblNYaNnHUhMofPa',
   LARK_DOMAIN: process.env.LARK_DOMAIN    || 'https://open.larksuite.com',
   FB_USER_TOKEN: process.env.FB_USER_TOKEN|| '',
   FB_VERSION:  process.env.FB_VERSION     || 'v25.0',
