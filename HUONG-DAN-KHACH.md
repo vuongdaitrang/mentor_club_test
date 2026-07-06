@@ -1,10 +1,10 @@
 # Hướng dẫn gọi (HTTP)
 
-Repo: https://github.com/nguyenlanh282/mentor_club_test
+Repo: https://github.com/vuongdaitrang/mentor_club_test
 
 Gọi 1 request là hệ thống chạy trên GitHub, không cần bật máy:
 ```bash
-curl -i -X POST https://api.github.com/repos/nguyenlanh282/mentor_club_test/dispatches \
+curl -i -X POST https://api.github.com/repos/vuongdaitrang/mentor_club_test/dispatches \
   -H "Authorization: Bearer <PAT>" -H "Accept: application/vnd.github+json" \
   -H "Content-Type: application/json" \
   -d '{"event_type":"<EVENT>","client_payload":{}}'
